@@ -1,0 +1,403 @@
+﻿<Project ToolsVersion="15.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.0\build\net46\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props" Condition="Exists('..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.0\build\net46\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props')" />
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>
+    </ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{7459730F-6AFF-4B3A-A023-62714DA6DA74}</ProjectGuid>
+    <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>test</RootNamespace>
+    <AssemblyName>test</AssemblyName>
+    <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
+    <UseIISExpress>true</UseIISExpress>
+    <Use64BitIISExpress />
+    <IISExpressSSLPort />
+    <IISExpressAnonymousAuthentication />
+    <IISExpressWindowsAuthentication />
+    <IISExpressUseClassicPipelineMode />
+    <UseGlobalApplicationHostFile />
+    <NuGetPackageImportStamp>
+    </NuGetPackageImportStamp>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Google.Protobuf, Version=3.5.1.0, Culture=neutral, PublicKeyToken=a7d26565bac4d604, processorArchitecture=MSIL">
+      <HintPath>..\packages\Google.Protobuf.3.5.1\lib\net45\Google.Protobuf.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="MySql.Data, Version=8.0.15.0, Culture=neutral, PublicKeyToken=c5687fc88969c44d, processorArchitecture=MSIL">
+      <HintPath>..\packages\MySql.Data.8.0.15\lib\net452\MySql.Data.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.ComponentModel" />
+    <Reference Include="System.Configuration.Install" />
+    <Reference Include="System.Drawing.Design" />
+    <Reference Include="System.Management" />
+    <Reference Include="System.Transactions" />
+    <Reference Include="System.Web.DynamicData" />
+    <Reference Include="System.Web.Entity" />
+    <Reference Include="System.Web.ApplicationServices" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.EnterpriseServices" />
+  </ItemGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.CodeDom.Providers.DotNetCompilerPlatform">
+      <HintPath>..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.0\lib\net45\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="assets\assets\coloredbg.html" />
+    <Content Include="assets\assets\gridtile.html" />
+    <Content Include="assets\assets\gridtile_3x3.html" />
+    <Content Include="assets\assets\gridtile_3x3_white.html" />
+    <Content Include="assets\assets\gridtile_white.html" />
+    <Content Include="assets\assets\loader.html" />
+    <Content Include="assets\css\bootstrap.min.css" />
+    <Content Include="assets\css\closedhand.html" />
+    <Content Include="assets\css\font-awesome.css" />
+    <Content Include="assets\css\header.css" />
+    <Content Include="assets\css\index1.css" />
+    <Content Include="assets\css\ionicons.css" />
+    <Content Include="assets\css\jquery.fancybox.css" />
+    <Content Include="assets\css\layers.css" />
+    <Content Include="assets\css\openhand.html" />
+    <Content Include="assets\css\owl.carousel.css" />
+    <Content Include="assets\css\owl.video.play.html" />
+    <Content Include="assets\css\settings.css" />
+    <Content Include="assets\css\simple-line-icons.css" />
+    <Content Include="assets\css\style.css" />
+    <Content Include="assets\extensions\revolution.extension.layeranimation.min.js" />
+    <Content Include="assets\extensions\revolution.extension.navigation.min.js" />
+    <Content Include="assets\extensions\revolution.extension.parallax.min.js" />
+    <Content Include="assets\extensions\revolution.extension.slideanims.min.js" />
+    <Content Include="assets\fonts\fontawesome-webfont3295.svg" />
+    <Content Include="assets\fonts\ionicons28b5.svg" />
+    <Content Include="assets\fonts\revicons\revicons90c6.svg" />
+    <Content Include="assets\fonts\Simple-Line-Iconsb26c.svg" />
+    <Content Include="assets\images\02.html" />
+    <Content Include="assets\images\2-1.jpg" />
+    <Content Include="assets\images\2.html" />
+    <Content Include="assets\images\2.png" />
+    <Content Include="assets\images\about-1.jpg" />
+    <Content Include="assets\images\about-2.jpg" />
+    <Content Include="assets\images\about-plamber-1.jpg" />
+    <Content Include="assets\images\about-plamber-2.jpg" />
+    <Content Include="assets\images\app-store.png" />
+    <Content Include="assets\images\author.jpg" />
+    <Content Include="assets\images\banner\slider1.jpg" />
+    <Content Include="assets\images\banner\slider2.jpg" />
+    <Content Include="assets\images\banner\slider3.jpg" />
+    <Content Include="assets\images\bba.png" />
+    <Content Include="assets\images\bca.jpg" />
+    <Content Include="assets\images\Bcom.jpg" />
+    <Content Include="assets\images\bg-10.html" />
+    <Content Include="assets\images\bg-11.html" />
+    <Content Include="assets\images\bg_1.jpg" />
+    <Content Include="assets\images\blog.jpg" />
+    <Content Include="assets\images\blog\1.jpg" />
+    <Content Include="assets\images\blog\2.jpg" />
+    <Content Include="assets\images\blog\3.jpg" />
+    <Content Include="assets\images\blog\5.jpg" />
+    <Content Include="assets\images\blog\6.jpg" />
+    <Content Include="assets\images\blog\blog-1.jpg" />
+    <Content Include="assets\images\blog\blog-3.jpg" />
+    <Content Include="assets\images\blog\blog-small-img.jpg" />
+    <Content Include="assets\images\blog\blog-small-img1.jpg" />
+    <Content Include="assets\images\blog\blog-small-img2.jpg" />
+    <Content Include="assets\images\blog\img1.jpg" />
+    <Content Include="assets\images\blog\img2.jpg" />
+    <Content Include="assets\images\blog\img3.jpg" />
+    <Content Include="assets\images\Career-BBA.jpg" />
+    <Content Include="assets\images\chairman.PNG" />
+    <Content Include="assets\images\client-logo\1.png" />
+    <Content Include="assets\images\client-logo\2.png" />
+    <Content Include="assets\images\client-logo\3.png" />
+    <Content Include="assets\images\client-logo\4.png" />
+    <Content Include="assets\images\client-logo\5.png" />
+    <Content Include="assets\images\client-logo\6.png" />
+    <Content Include="assets\images\contact.jpg" />
+    <Content Include="assets\images\corve.html" />
+    <Content Include="assets\images\course.jpg" />
+    <Content Include="assets\images\finance-bg1.jpg" />
+    <Content Include="assets\images\finance-bg2.jpg" />
+    <Content Include="assets\images\finance-bg3.jpg" />
+    <Content Include="assets\images\finance-bg4.html" />
+    <Content Include="assets\images\flyer.jpg" />
+    <Content Include="assets\images\footer-logo.png" />
+    <Content Include="assets\images\google-play.png" />
+    <Content Include="assets\images\graph.html" />
+    <Content Include="assets\images\hosting-slide3.html" />
+    <Content Include="assets\images\icon\submenu-icon.html" />
+    <Content Include="assets\images\img1.jpg" />
+    <Content Include="assets\images\img2.jpg" />
+    <Content Include="assets\images\img3.jpg" />
+    <Content Include="assets\images\img4.jpg" />
+    <Content Include="assets\images\light-box\blank.gif" />
+    <Content Include="assets\images\light-box\fancybox_sprite.png" />
+    <Content Include="assets\images\logo.png" />
+    <Content Include="assets\images\logo2.png" />
+    <Content Include="assets\images\mobileapp.png" />
+    <Content Include="assets\images\new_slider02.html" />
+    <Content Include="assets\images\parallax1.html" />
+    <Content Include="assets\images\parallax2.jpg" />
+    <Content Include="assets\images\people.jpg" />
+    <Content Include="assets\images\people1.jpg" />
+    <Content Include="assets\images\people2.jpg" />
+    <Content Include="assets\images\quote-author.jpg" />
+    <Content Include="assets\images\quote-author2.jpg" />
+    <Content Include="assets\images\rdtgr.jpg" />
+    <Content Include="assets\images\slider-home-construction-02.html" />
+    <Content Include="assets\images\slider.html" />
+    <Content Include="assets\images\slider3.jpg" />
+    <Content Include="assets\images\Teacher%27s\39270449_1826532954096372_921914236165160960_n.jpg" />
+    <Content Include="assets\images\Teacher%27s\578119_10152636502965316_804962734_n.jpg" />
+    <Content Include="assets\images\Teacher%27s\IMG-20180904-WA0006.jpg" />
+    <Content Include="assets\images\Teacher%27s\IMG-20180904-WA0007.jpg" />
+    <Content Include="assets\images\Teacher%27s\IMG-20180904-WA0008.jpg" />
+    <Content Include="assets\images\Teacher%27s\IMG-20180904-WA0010.jpg" />
+    <Content Include="assets\images\Teacher%27s\IMG-20180904-WA0011.jpg" />
+    <Content Include="assets\images\Teacher%27s\IMG-20180904-WA0012.jpg" />
+    <Content Include="assets\images\Teacher%27s\IMG-20180904-WA0013.jpg" />
+    <Content Include="assets\images\Teacher%27s\IMG-20180904-WA0015.jpg" />
+    <Content Include="assets\images\Teacher%27s\IMG-20180904-WA0016.jpg" />
+    <Content Include="assets\images\Teacher%27s\IMG-20180904-WA0017.jpg" />
+    <Content Include="assets\images\Teacher%27s\IMG-20180904-WA0018.jpg" />
+    <Content Include="assets\images\Teacher%27s\IMG-20180904-WA0022.jpg" />
+    <Content Include="assets\images\Teacher%27s\IMG-20180904-WA0023.jpg" />
+    <Content Include="assets\images\Teacher%27s\IMG-20180904-WA0024.jpg" />
+    <Content Include="assets\images\Teacher%27s\IMG-20180904-WA0025.jpg" />
+    <Content Include="assets\images\Teacher%27s\IMG-20180904-WA0026.jpg" />
+    <Content Include="assets\images\Teacher%27s\IMG-20180904-WA0027.jpg" />
+    <Content Include="assets\images\Teacher%27s\IMG-20180904-WA0028.jpg" />
+    <Content Include="assets\images\Teacher%27s\IMG-20180904-WA0029.jpg" />
+    <Content Include="assets\images\Teacher%27s\IMG-20180904-WA0030.jpg" />
+    <Content Include="assets\images\Teacher%27s\IMG-20180904-WA0032.jpg" />
+    <Content Include="assets\images\Teacher%27s\IMG-20180904-WA0034.jpg" />
+    <Content Include="assets\images\Teacher%27s\IMG_20180905_092021.jpg" />
+    <Content Include="assets\images\Teacher%27s\IMG_20180905_092103.jpg" />
+    <Content Include="assets\images\Teacher%27s\IMG_20180905_092307.jpg" />
+    <Content Include="assets\images\Teacher%27s\IMG_20180905_092818.jpg" />
+    <Content Include="assets\images\team\team1.jpg" />
+    <Content Include="assets\images\team\team2.jpg" />
+    <Content Include="assets\images\team\team3.jpg" />
+    <Content Include="assets\images\team\team4.jpg" />
+    <Content Include="assets\images\testimonial\1.jpg" />
+    <Content Include="assets\images\testimonial\2.jpg" />
+    <Content Include="assets\images\testimonial\3.jpg" />
+    <Content Include="assets\images\user2-160x160.jpg" />
+    <Content Include="assets\images\white-texture.html" />
+    <Content Include="assets\images\Why-Do-A-BCA-Course.jpg" />
+    <Content Include="assets\images\wipro-logo-twire.png" />
+    <Content Include="assets\js\bootstrap.min.js" />
+    <Content Include="assets\js\custom.js" />
+    <Content Include="assets\js\imagesloaded.pkgd.min.js" />
+    <Content Include="assets\js\isotope.pkgd.min.js" />
+    <Content Include="assets\js\jquery.accordion.js" />
+    <Content Include="assets\js\jquery.appear.js" />
+    <Content Include="assets\js\jquery.easing.js" />
+    <Content Include="assets\js\jquery.fancybox.pack.js" />
+    <Content Include="assets\js\jquery.matchHeight-min.js" />
+    <Content Include="assets\js\jquery.min.js" />
+    <Content Include="assets\js\jquery.mousewheel-3.0.6.pack.js" />
+    <Content Include="assets\js\jquery.parallax-1.1.3.js" />
+    <Content Include="assets\js\jquery.revolution.js" />
+    <Content Include="assets\js\jquery.themepunch.revolution.min.js" />
+    <Content Include="assets\js\jquery.themepunch.tools.min.js" />
+    <Content Include="assets\js\masonry.pkgd.min.js" />
+    <Content Include="assets\js\owl.carousel.js" />
+    <Content Include="assets\js\plugin\jquery.easing.html" />
+    <Content Include="assets\js\revolution-custom.html" />
+    <Content Include="assets\js\revolution.extension.layeranimation.min.js" />
+    <Content Include="assets\js\revolution.extension.navigation.min.js" />
+    <Content Include="assets\js\revolution.extension.parallax.min.js" />
+    <Content Include="assets\js\revolution.extension.slideanims.min.js" />
+    <Content Include="assets\js\tether.min.js" />
+    <Content Include="assets\js\validation.js" />
+    <Content Include="assets\rs-slider\rs-plugin\js\jquery.themepunch.revolution.min.html" />
+    <Content Include="assets\rs-slider\rs-plugin\js\jquery.themepunch.tools.min.html" />
+    <Content Include="bin\Google.Protobuf.dll" />
+    <Content Include="bin\Google.Protobuf.xml" />
+    <Content Include="bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll" />
+    <Content Include="bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml" />
+    <Content Include="bin\MySql.Data.dll" />
+    <Content Include="bin\MySql.Data.xml" />
+    <Content Include="bin\placement management.dll" />
+    <Content Include="bin\placement management.pdb" />
+    <Content Include="bin\roslyn\csc.exe" />
+    <Content Include="bin\roslyn\csi.exe" />
+    <Content Include="bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll" />
+    <Content Include="bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll" />
+    <Content Include="bin\roslyn\Microsoft.CodeAnalysis.CSharp.Scripting.dll" />
+    <Content Include="bin\roslyn\Microsoft.CodeAnalysis.dll" />
+    <Content Include="bin\roslyn\Microsoft.CodeAnalysis.Scripting.dll" />
+    <Content Include="bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll" />
+    <Content Include="bin\roslyn\Microsoft.DiaSymReader.Native.amd64.dll" />
+    <Content Include="bin\roslyn\Microsoft.DiaSymReader.Native.x86.dll" />
+    <Content Include="bin\roslyn\System.AppContext.dll" />
+    <Content Include="bin\roslyn\System.Collections.Immutable.dll" />
+    <Content Include="bin\roslyn\System.Console.dll" />
+    <Content Include="bin\roslyn\System.Diagnostics.FileVersionInfo.dll" />
+    <Content Include="bin\roslyn\System.Diagnostics.StackTrace.dll" />
+    <Content Include="bin\roslyn\System.IO.Compression.dll" />
+    <Content Include="bin\roslyn\System.IO.FileSystem.dll" />
+    <Content Include="bin\roslyn\System.IO.FileSystem.Primitives.dll" />
+    <Content Include="bin\roslyn\System.IO.Pipes.AccessControl.dll" />
+    <Content Include="bin\roslyn\System.IO.Pipes.dll" />
+    <Content Include="bin\roslyn\System.Reflection.Metadata.dll" />
+    <Content Include="bin\roslyn\System.Security.AccessControl.dll" />
+    <Content Include="bin\roslyn\System.Security.Claims.dll" />
+    <Content Include="bin\roslyn\System.Security.Cryptography.Algorithms.dll" />
+    <Content Include="bin\roslyn\System.Security.Cryptography.Encoding.dll" />
+    <Content Include="bin\roslyn\System.Security.Cryptography.Primitives.dll" />
+    <Content Include="bin\roslyn\System.Security.Cryptography.X509Certificates.dll" />
+    <Content Include="bin\roslyn\System.Security.Principal.Windows.dll" />
+    <Content Include="bin\roslyn\System.Text.Encoding.CodePages.dll" />
+    <Content Include="bin\roslyn\System.ValueTuple.dll" />
+    <Content Include="bin\roslyn\System.Xml.ReaderWriter.dll" />
+    <Content Include="bin\roslyn\System.Xml.XmlDocument.dll" />
+    <Content Include="bin\roslyn\System.Xml.XPath.dll" />
+    <Content Include="bin\roslyn\System.Xml.XPath.XDocument.dll" />
+    <Content Include="bin\roslyn\vbc.exe" />
+    <Content Include="bin\roslyn\VBCSCompiler.exe" />
+    <Content Include="home.aspx" />
+    <Content Include="images\light-box\fancybox_loading%402x.html" />
+    <Content Include="images\light-box\fancybox_loading.html" />
+    <Content Include="images\light-box\fancybox_overlay.html" />
+    <Content Include="images\light-box\fancybox_sprite%402x.html" />
+    <Content Include="Login.aspx" />
+    <Content Include="StudentRegistration.aspx" />
+    <Content Include="Web.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="home.aspx.cs">
+      <DependentUpon>home.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="home.aspx.designer.cs">
+      <DependentUpon>home.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Login.aspx.cs">
+      <DependentUpon>Login.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Login.aspx.designer.cs">
+      <DependentUpon>Login.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="StudentRegistration.aspx.cs">
+      <DependentUpon>StudentRegistration.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="StudentRegistration.aspx.designer.cs">
+      <DependentUpon>StudentRegistration.aspx</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="assets\fonts\fontawesome-webfont3295.eot" />
+    <Content Include="assets\fonts\fontawesome-webfont3295.ttf" />
+    <Content Include="assets\fonts\fontawesome-webfont3295.woff" />
+    <Content Include="assets\fonts\fontawesome-webfont3295.woff2" />
+    <Content Include="assets\fonts\fontawesome-webfontd41d.eot" />
+    <Content Include="assets\fonts\ionicons28b5.eot" />
+    <Content Include="assets\fonts\ionicons28b5.ttf" />
+    <Content Include="assets\fonts\ionicons28b5.woff" />
+    <Content Include="assets\fonts\revicons\revicons90c6.eot" />
+    <Content Include="assets\fonts\revicons\revicons90c6.ttf" />
+    <Content Include="assets\fonts\revicons\revicons90c6.woff" />
+    <Content Include="assets\fonts\Simple-Line-Iconsb26c.eot" />
+    <Content Include="assets\fonts\Simple-Line-Iconsb26c.ttf" />
+    <Content Include="assets\fonts\Simple-Line-Iconsb26c.woff" />
+    <Content Include="assets\fonts\Simple-Line-Iconsb26c.woff2" />
+    <Content Include="assets\images\Downloads.lnk" />
+    <Content Include="bin\placement management.dll.config" />
+    <Content Include="bin\roslyn\csc.exe.config" />
+    <Content Include="bin\roslyn\csc.rsp" />
+    <Content Include="bin\roslyn\csi.exe.config" />
+    <Content Include="bin\roslyn\csi.rsp" />
+    <Content Include="bin\roslyn\Microsoft.CSharp.Core.targets" />
+    <Content Include="bin\roslyn\Microsoft.Managed.Core.targets" />
+    <Content Include="bin\roslyn\Microsoft.VisualBasic.Core.targets" />
+    <Content Include="bin\roslyn\vbc.exe.config" />
+    <Content Include="bin\roslyn\vbc.rsp" />
+    <Content Include="bin\roslyn\VBCSCompiler.exe.config" />
+    <None Include="packages.config" />
+    <None Include="Web.Debug.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
+    <None Include="Web.Release.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
+  </ItemGroup>
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+  </PropertyGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(VSToolsPath)\WebApplications\Microsoft.WebApplication.targets" Condition="'$(VSToolsPath)' != ''" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" Condition="false" />
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>True</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>52223</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>http://localhost:52223/</IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl>
+          </CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+  <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
+    <PropertyGroup>
+      <ErrorText>This project references NuGet package(s) that are missing on this computer. Use NuGet Package Restore to download them.  For more information, see http://go.microsoft.com/fwlink/?LinkID=322105. The missing file is {0}.</ErrorText>
+    </PropertyGroup>
+    <Error Condition="!Exists('..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.0\build\net46\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.0\build\net46\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props'))" />
+  </Target>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
